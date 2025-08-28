@@ -33,7 +33,7 @@ typedef struct substr_func_struc {
     long int  length     ;
 } substr_func;
 
-// Hash set structure
+// Data structure to define the syntax conversion between a DBMS and input syntax
 typedef struct substr_func_sybtax_struct {
     char *func_name ;   /* function name */
     int neg_start   ;   /* if negative start_pos is allowed, default is false (0) */  
