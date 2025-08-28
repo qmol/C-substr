@@ -52,4 +52,6 @@ FunctionStatus parse_substr_call(const char *input_str, substr_func *f_struct_ou
 FunctionStatus translate_substr_func(const char *input_str, const substr_func_syntax *f_syntax,
                         char *out_substr_string, size_t out_str_len, size_t *out_str_wrt);
 
+FunctionStatus translate_substr_func_useID(const char *input_str, const int DBMS_id, const substr_func_syntax *f_syntax,
+                        char *out_substr_string, size_t out_str_len, size_t *out_str_wrt);
 #endif // __substr_wrapper_h__

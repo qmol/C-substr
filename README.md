@@ -11,6 +11,10 @@ Different DBMS systems have varying syntax rules for substring functions:
 
 This library abstracts these differences and provides translation capabilities between different DBMS substring syntaxes.
 
+## Asumptions
+- Input is a string containes a SAS-like SUBSTR function in the syntax of "SUBSTR(string, position <, length>)".
+- A second input variable is the ID of target DBMS that the "SUBSTR" function call is to be translated.
+
 ## Features
 
 - Parse substring function calls from input strings

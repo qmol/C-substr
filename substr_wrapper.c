@@ -288,3 +288,13 @@ FunctionStatus translate_substr_func(const char *input_str, const substr_func_sy
 
     return RET_SUCCESS; // return number of chars written
 }
+
+/* 
+    A wrapper function uses DBMS id to call real translator
+*/
+FunctionStatus translate_substr_func_useID(const char *input_str, const int DBMS_id, const substr_func_syntax *f_syntax,
+                        char *out_substr_string, size_t out_str_len, size_t *out_str_wrt)
+{
+    return translate_substr_func(input_str, f_syntax + DBMS_id,
+                        out_substr_string, out_str_len, out_str_wrt);
+}
